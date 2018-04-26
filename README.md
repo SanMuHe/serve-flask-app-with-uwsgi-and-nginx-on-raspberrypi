@@ -159,6 +159,13 @@ If this returns without indicating any issues, we can restart the Nginx process 
 sudo service nginx restart
 ```
 
+**Note:** For Nginx it is required to have all the certificates (one for your domain name and CA ones) combined in a single file. The certificate for your domain should be listed first in the file, followed by the chain of CA certificates.
+If you have downloaded a complete CABundle file for your certificate, use the following command to combine all the certificates into a single file:
+
+```bash
+cat *yourdomainname*.crt *yourdomainname*.ca-bundle >> cert_chain.crt
+```
+
 ## Reference
 
 - [How To Serve Flask Applications with uWSGI and Nginx on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-uwsgi-and-nginx-on-ubuntu-14-04)

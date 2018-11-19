@@ -5,6 +5,7 @@
 - [Install Prerequisites](#install-prerequisites)
 - [Configure uWSGI](#configure-uwsgi)
 - [Configure Nginx](#configure-nginx)
+- [Troubleshooting Tips](#troubleshooting-tips)
 - [Reference](#reference)
 - [License](#license)
 
@@ -165,6 +166,14 @@ If you have downloaded a complete CABundle file for your certificate, use the fo
 ```bash
 cat *yourdomainname*.crt *yourdomainname*.ca-bundle >> cert_chain.crt
 ```
+
+## Troubleshooting Tips
+
+### 502 Bad Gateway
+
+Sometimes, after restart your RaspberryPi, you will get `502 Bad Gateway` error from nginx server.
+One possible reason of this error is the uWSGI service is not correctly started.
+Try to run `systemctl start emperor.uwsgi.service` again to start uWSGI service can fix this issue.
 
 ## Reference
 

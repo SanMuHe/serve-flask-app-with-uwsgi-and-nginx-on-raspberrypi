@@ -167,6 +167,8 @@ If you have downloaded a complete CABundle file for your certificate, use the fo
 cat *yourdomainname*.crt *yourdomainname*.ca-bundle >> cert_chain.crt
 ```
 
+**Tip:** You can get a free SSL certificates from [Let's Encrypt](https://letsencrypt.org/).
+
 ## Troubleshooting Tips
 
 ### 502 Bad Gateway
